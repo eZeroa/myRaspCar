@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Control the car</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="car.js"></script>
+
+
+</head>
+<body>
+<div style="height: 800px; width: 600px">
+    <img id="picture" src="http://192.168.43.99:8002/?action=stream"/>
+    <table align="center">
+        <tr>
+            <td>
+                <button onclick=speedAcc()>加速</button>
+            </td>
+            <td>
+                <button onclick="left(150)">↖</button>
+            </td>
+            <td>
+                <button onclick=up()>↑</button>
+            </td>
+            <td>
+                <button onclick="right(150)">↗</button>
+
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                <button onclick=rotate()>旋转</button>
+            </td>
+            <td>
+                <button onclick="left(300)">←</button>
+            </td>
+            <td>
+                <button onclick="stop()">□</button>
+            </td>
+            <td>
+                <button onclick="right(300)">→</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="speedDec()">减速</button>
+            </td>
+            <td>
+                <button onclick="right(150)">↙</button>
+            </td>
+            <td>
+                <button onclick="down()">↓</button>
+            </td>
+            <td>
+                <button onclick="left(150)">↘</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="navigateAvoid()">避障</button>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                <button onclick="navigateLine()">循迹</button>
+            </td>
+        </tr>
+    </table>
+    <table align="center">
+        <tr>
+            <td>
+                摄像头
+            </td>
+            <td>
+                右
+                <button onclick="cameraLeftAndRight(-3)">3度</button>
+                <button onclick="cameraLeftAndRight(-7)">7度</button>
+                <button onclick="cameraLeftAndRight(-10)">10度</button>
+            </td>
+            <td>
+                左
+                <button onclick="cameraLeftAndRight(3)">3度</button>
+                <button onclick="cameraLeftAndRight(7)">7度</button>
+                <button onclick="cameraLeftAndRight(10)">10度</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                摄像头
+            </td>
+            <td>
+                上
+                <button onclick="cameraUpAndDown(-3)">3度</button>
+                <button onclick="cameraUpAndDown(-7)">7度</button>
+                <button onclick="cameraUpAndDown(-10)">10度</button>
+            </td>
+            <td>
+                下
+                <button onclick="cameraUpAndDown(3)">3度</button>
+                <button onclick="cameraUpAndDown(7)">7度</button>
+                <button onclick="cameraUpAndDown(10)">10度</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                超声波
+            </td>
+            <td>
+                右
+                <button onclick="ultrasonicWaveLeftAndRight(-3)">3度</button>
+                <button onclick="ultrasonicWaveLeftAndRight(-7)">7度</button>
+                <button onclick="ultrasonicWaveLeftAndRight(-10)">10度</button>
+            </td>
+            <td>
+                左
+                <button onclick="ultrasonicWaveLeftAndRight(3)">3度</button>
+                <button onclick="ultrasonicWaveLeftAndRight(7)">7度</button>
+                <button onclick="ultrasonicWaveLeftAndRight(10)">10度</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                亮瞎眼
+            </td>
+            <td>
+                <button onclick="lightOn()">开灯</button>
+            </td>
+            <td>
+                <button onclick="lightOff()">关灯</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                超声波
+            </td>
+            <td>
+                <button onclick="getDistance()">测距</button>
+            </td>
+            <td>
+                <span id="distance"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>激光biu</td>
+            <td>
+                <button onclick="laserOpen()">打开</button>
+            </td>
+            <td>
+                <button onclick="laserClose()">关闭</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                相机
+            </td>
+            <td>
+                <button onclick="cameraOn()">开启</button>
+            </td>
+            <td>
+                <button onclick="cameraOff()">关闭</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                风扇
+            </td>
+            <td>
+                <button onclick="fanC()">顺时针</button>
+            </td>
+            <td>
+                <button onclick="fanS()">停止</button>
+            </td>
+            <td>
+                <button onclick="fanA()">逆时针</button>
+            </td>
+
+        </tr>
+    </table>
+</div>
+<div>
+
+</div>
+</body>
+</html>
